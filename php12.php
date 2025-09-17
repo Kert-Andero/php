@@ -8,7 +8,19 @@
   </head>
   <body>
     <h1>Harjutus 12</h1>
+    <form action=""> 
+            start: <input type="time" name="start" id=""><br>
+            start: <input type="time" name="finish" id=""><br>
+            <input type="submit" value="Leia aeg">
+    </form>
+    <?php
+        $s = strtotime($_GET["start"]);
+        $f = strtotime($_GET["finish"]);
 
+        $diff = abs($s - $f)/3600*60;
+        echo intdiv($diff,60).":".$diff % 60;
+      
+    ?>
 
 
 
