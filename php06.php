@@ -35,12 +35,30 @@
         }
       }
     ?>
-    
-    <h4>Kahanev</h4>
+
+    <h4>Kolmega jaguvad</h4>
     <?php
+    for ($i=1; $i <= 100 ; $i++) {
+        if ($i%3==0) {
+          echo $i. "<br>";
+        }
+      }
+    ?>
+    
+    <h4>Horisontaalne rida</h4>
+    <?php
+      $tarnideArv = 10;
 
+      for ($i = 0; $i < $tarnideArv; $i++) {
+          echo "*";
+      }
+    ?>
 
-
+        <h4>Vertikaalne rida</h4>
+    <?php
+       for($rida=1; $rida<=10; $rida++){ 
+        echo '*<br>';
+      }
     ?>
 
 
