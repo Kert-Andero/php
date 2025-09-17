@@ -8,23 +8,6 @@
   </head>
   <body>
     <h1>Harjutus 04</h1>
-    <h2>4.6 Juubel</h2>
-    <form action="#" method="get">
-    sünniaasta <input type="number" name="synniaasta" required><br>
-    <input type="submit" value="Leia juubel">
-    </form>
-    <?php
-        if(isset($_GET["synniaasta"])){
-            $vanus = 2025 - $_GET["synniaasta"];
-            if($vanus%5 == 0){
-                echo "Juubel";
-            } else {
-                echo "Ei ole Juubel";
-            }
-        }
-            
-    ?>
-
     <h2>Jagamine</h2>
     <form action="#" method="get">
         arv1 <input type="number" name="arv1" require><br>
@@ -42,13 +25,45 @@
                 echo $arv1 / $arv2;
             }
     }
-
     ?>
 
 
+    <h2>4.6 Juubel</h2>
+    <form action="#" method="get">
+    sünniaasta <input type="number" name="synniaasta" required><br>
+    <input type="submit" value="Leia juubel">
+    </form>
+    <?php
+        if(isset($_GET["synniaasta"])){
+            $vanus = 2025 - $_GET["synniaasta"];
+            if($vanus%5 == 0){
+                echo "Juubel";
+            } else {
+                echo "Ei ole Juubel";
+            }
+        }
+            
+    ?>
 
 
+    <h2>4.7 Hinne</h2>
+    <form action="#" method="get">
+        Punktid <input type="number" name="Punktid" required value="5" min="1" max="10"><br>
+        <input type="submit" value="Anna hinne">
+    </form>
+    <?php
+        if(isset($_GET["punktid"])){
+            $punktid = $_GET["punktid"];
 
+            switch($punktid){ 
+	            case ($punktid>=10): echo '5'; 
+	            break; 
+	            case (($punktid>=5) && ($punktid<=9)): echo '3'; 
+	            break; 
+	            default: echo 'MA'; 
+            } 
+        }
+    ?>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
   </body>
