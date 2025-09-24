@@ -8,26 +8,31 @@
   </head>
   <body>
     <h1>Harjutus 03</h1>
-    <form action="#" method="get">
-        a <input type="number" name="a" required><br>
-        b <input type="number" name="b" required><br>
-        h <input type="number" name="h" required><br>
-        <input type="submit" value="arvuta"> 
+  <form action="#" method="get">
+        arv1 <input type="number" name="arv1" required><br>
+        arv2 <input type="number" name="arv2" required><br>
+        <input type="submit" value="jaga">
     </form>
+    <?php
+    if(isset($_GET["arv1"]) && isset($_GET["arv2"])){
+        $arv1 = $_GET["arv1"];
+            $arv2 = $_GET["arv2"];
+
+            if($arv2==0){
+                echo "Nulliga ei saa jagada";
+            } else {
+                echo $arv1 / $arv2;
+            }
+        }
+    ?>
+    <h4>Trapets</h4>
     <?php
         $a = $_GET["a"];
         $b = $_GET["b"];
         $h = $_GET["h"];
-        $s = ($a + $b)/2*$h;
-
-        echo "Trapetsi pindala: ".$s."<br>";
-
-    ?>
-
-
-
-
-
+        $trapets = ($a + $b)/2*$h;
+        echo "trapetasi pindala: ".$trapets."<br>";
+    ?> 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
   </body>
