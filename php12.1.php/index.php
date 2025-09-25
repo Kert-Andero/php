@@ -31,24 +31,9 @@
         echo "kõik võrdsed";
     }
 
-	//    //siin tükelda
-		//echo $rida[$i].' ';
-     //   $tykid = explode(" ", $rida[$i]);
-    //    print_r($tykid);
-     //   if ($tykid == "m") {
-      //      $mkokku+=1;
-      //  } else {
-      //      $nkokku+=1;
-     //   }
-	//echo '<br>';
-	
-//fclose($minu_csv);
-
     ?>
-
-
-
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
   </body>
+
 </html>
