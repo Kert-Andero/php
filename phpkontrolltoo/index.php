@@ -33,7 +33,7 @@
   <div id="banner" class="carousel slide mb-5" data-bs-ride="carousel">
     <div class="carousel-inner rounded-4 shadow-sm">
       <?php foreach ($pildid as $i => $pilt): ?>
-      <div class="carousel-item <?= $i === 0 ? 'active' : '' ?>">
+      <div class="carousel-item' . ($active ? ' active' : '') . '">';
         <img src="<?= htmlspecialchars($pilt) ?>" class="d-block w-100" style="height:360px;object-fit:cover;" alt="Bänner">
         <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded-3">
           <h5>Hea valik tööriistu</h5>
