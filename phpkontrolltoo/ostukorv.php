@@ -68,7 +68,7 @@ if (isset($_GET['lisa']) && isset($_GET['hind'])) {
             number_format($total, 2, ',', ' ') .
             ' EUR</strong></p>';
 
-        echo '<a href="index.php" class="btn btn-secondary">Jätka ostlemist</a>';
+        echo '<a href="tooted.php" class="btn btn-secondary">Jätka ostlemist</a>';
     }
     ?>
 </div>
